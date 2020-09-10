@@ -1,0 +1,55 @@
+.TweetMain{
+  height: calc(100vh - 65px);
+  // width: 100%;
+  background-color: whitesmoke;
+  &__form{
+    height: 100%;
+    width: 680px;
+    margin: 0 auto;
+    background-color: white;
+    overflow: scroll;
+    font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    box-shadow: 0 0 10px rgba(41,41,41,0.2);
+  }
+  &__menu{
+    padding: 5px;
+    // margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  &__body{
+    display: flex;
+    padding: 7px 14px 5px 14px;
+    &__name{
+      padding-top: 11px;
+      font-weight: 500;
+    }
+    &__Name{
+      text-decoration: none;
+      color: black;
+    }
+    &__date{
+      font-size: 12px;
+      padding: 0 0 13px 14px;
+      color: grey;
+    }
+  }
+  &__title{
+    padding-left: 55px;
+    padding-right: 20px;
+    font-size: 21px;
+    font-weight: 900;
+  }
+  &__Title{
+    text-decoration: none;
+    color: black;
+  }
+  &__favorite{
+    float: right;
+    font-size: 16px;
+    margin-top: 6px;
+  }
+}
+.Favorite{
+  text-decoration: none;
+  color: lightcoral;
+}

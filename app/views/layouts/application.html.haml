@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Background
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    %header.Header
+      = link_to root_path, class: "Header__logo" do
+        Background
+      - if user_signed_in?
+        .Header__in
+          = link_to tweets_path, class: 'headerSign' do
+            = icon('fas','book-open')
+          = link_to new_tweet_path, class: "headerSign" do
+            = icon('far','plus-square')
+          = link_to users_path, class: 'headerSign' do
+            = icon('fas','users')
+          = link_to user_path(current_user), class: "headerSign" do
+            = icon('fas','user')
+          = link_to destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: 'headerSign' do
+            = icon('fas','sign-out-alt')
+      - else
+        .Header__out
+          = link_to tweets_path, class: 'headerSign' do
+            = icon('fas','book-open')
+          = link_to users_path, class: 'headerSign' do
+            = icon('fas','users')
+          = link_to new_user_session_path, class: 'headerSign' do
+            = icon('fas','sign-in-alt')
+          = link_to new_user_registration_path, class: 'headerSign' do
+            = icon('fas','user-plus')
+    = render 'layouts/notifications'
+    = yield

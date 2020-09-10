@@ -1,0 +1,31 @@
+.Tweetshow
+  .Tweetshow__user
+    .Tweetshow__user__main
+      = link_to user_path(@tweet.user) do
+        - if @tweet.user.image?
+          = image_tag @tweet.user.image.url, size: "70", class: "Tweetshow__image"
+        - else
+          = image_tag "no-image.png", alt: "Tweetshow__image", size: "70", class: "Tweetshow__image"
+      .Tweetshow__user__main__name
+        = link_to user_path(@tweet.user), class: "Tweetshow__user__main__Name" do
+          = @tweet.user.username
+      .Tweetshow__user__main__date
+        = @tweet.updated_at.strftime("%Y-%m-%d %H:%M")
+    .Tweetshow__user__sub
+      .Tweetshow__user__form
+        = @tweet.title
+        .Tweetshow__user__font
+          - if @tweet.user.id == current_user.id
+            = link_to edit_tweet_path(@tweet), class: "Tweetshow__user__font__edit" do
+              = icon('fas', 'edit')
+          .Tweetshow__user__form__favorite
+            - if current_user.already_favorited?(@tweet)
+              = link_to tweet_favorites_path(@tweet), method: :delete, class: "ShowFavorite" do
+                = icon('fas', 'heart')
+            - else
+              = link_to tweet_favorites_path(@tweet), method: :post, class: "ShowFavorite" do
+                = icon('far', 'heart')
+            = @tweet.favorites.count
+      .Tweetshow__user__body
+        = simple_format @tweet.body
+

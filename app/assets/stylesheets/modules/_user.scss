@@ -1,0 +1,154 @@
+.newpage {
+  height: calc(100vh - 65px);
+  width: 100vw;
+  background-color:whitesmoke;
+  font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+  &__title {
+    font-size: 35px;
+    font-weight: 600;
+    padding: 20px 30px;
+    height: 60px;
+    letter-spacing: 0.05em;
+    text-align: center;
+  }
+  &__form {
+    width: 450px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  &__Tweetform{
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+}
+
+.formfield {
+  margin-bottom: 10px;;
+  &__label--normal {
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 800;
+    i {
+      font-size: 11px;
+    }
+    em {
+      font-weight: 800;
+    }
+    .field_with_errors {
+      display: inline-block;
+      color: orangered;
+      font-weight: 400;
+    }
+  }
+  &__input--normal {
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 10px;
+      letter-spacing: 1px;
+      border-radius: 10px;
+      outline: none;
+      
+    }
+    .field_with_errors {
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #d65f4c;
+      }
+    }
+  }
+  &__textarea{
+    #tweet_body {
+      box-sizing: border-box;
+      height: 300px;
+      width: 100%;
+      padding: 10px;
+      letter-spacing: 1px;
+      border-radius: 10px;
+      outline: none;
+      font-size: 14px;
+    }
+  }
+}
+
+.actions {
+  text-align: center;
+}
+
+.Button {
+  display: inline-block;
+  height: 50px;
+  width: 450px;
+  margin-top: 30px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.UserButton {
+  margin-top: 30px;
+  color: #fff;
+  background-color: orange;
+}
+
+#error_explanation {
+  margin: 7px 0;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+
+  h2 {
+    margin-bottom: 5px;
+    color: red;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 17px;
+    list-style: square;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+}
+
+.notification.is-danger {
+  text-align: center;
+  color: red;
+}
+
+.GuestButton {
+  margin-top: 30px;
+  color: #fff;
+  background-color: orange;
+  display: inline-block;
+  height: 50px;
+  width: 350px;
+  margin-top: 40px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+}

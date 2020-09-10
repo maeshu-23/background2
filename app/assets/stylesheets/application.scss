@@ -1,0 +1,51 @@
+@import "reset";
+@import "modules/user";
+@import "modules/flash";
+@import "modules/usermain";
+@import "modules/show";
+@import "modules/tweetshow";
+@import "modules/tweetmain";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "modules/home";
+
+.Header{
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  width: 100vw;
+  background-image: image-url("headerlogo.jpg");
+  font-weight: 900;
+  font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+  letter-spacing: 1px;
+  &__logo{
+    font-size: 32px;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    margin-left: 17px;
+  }
+  .headersign{
+    color: seashell;
+    padding-right: 15px;
+  }
+  &__in{
+    padding: 15px;
+    .headerSign {
+      text-decoration: none;
+      margin-right: 35px;
+      color: black;
+      font-size: 25px;
+    }
+  }
+  &__out{
+    padding: 20px;
+    .headerSign {
+      text-decoration: none;
+      margin-right: 35px;
+      color: black;
+      font-size: 25px;
+    }
+  }
+}
+

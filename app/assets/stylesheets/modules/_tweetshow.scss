@@ -1,0 +1,71 @@
+.Tweetshow {
+  height: calc(100vh - 106px);
+  background-color: whitesmoke;
+  padding-top: 40px;
+  &__user{
+    overflow: scroll;
+    height: 640px;
+    width: 780px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 10px;
+    font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    box-shadow: 0 0 20px rgba(41,41,41,0.2);
+    &__main{
+      display: flex;
+      padding-top: 10px;
+      &__name{
+        padding-top: 8px;
+      }
+      &__Name {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+      &__date{
+        padding-left: 20px;
+        font-size: 14px;
+      }
+    }
+    &__sub{
+      margin-top: 40px;
+    }
+    &__form{
+      font-size: 25px;
+      font-weight: 900;
+      padding-left: 10px;
+      display: flex;
+      justify-content: space-between;
+      &__favorite{
+        font-size: 19px;
+        margin: 11px 12px 0 0;
+      }
+    }
+    &__font{
+      display: flex;
+      &__edit{
+        margin: 9px 27px 0 0;
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+    }
+    &__body{
+      padding: 14px 15px 0 15px;
+      border-top: 1px solid #ddd;
+      p {
+        font-size: 17px;
+        font-weight: 400;
+      }
+    }
+  }
+  &__image{
+    border-radius: 50%;
+    margin: 0 11px 0 10px;
+    border: 1px solid #ddd;
+  }
+}
+.ShowFavorite {
+  text-decoration: none;
+  color: lightcoral;
+}

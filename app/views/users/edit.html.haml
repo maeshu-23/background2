@@ -1,0 +1,35 @@
+.newpage
+  .newpage__title
+    ユーザー編集
+  .newpage__form
+    - if @user.errors.any?
+      .notification.is-danger
+        %h2
+          = pluralize(@user.errors.count, "件の")
+          エラーが発生しました。
+        %ul
+          - @user.errors.full_messages.each do |message|
+            %li= message
+    = form_for @user do |f|
+      .formfield
+        .formfield__label--normal
+          = f.label :ユーザーネーム
+        .formfield__input--normal
+          = f.text_field :username, autofocus: true, autocomplete: "username", placeholder: 'username'
+      .formfield
+        .formfield__label--normal
+          = f.label :メールアドレス
+        .formfield__input--normal
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'email'
+      .formfield
+        .formfield__label--normal
+          = f.label :プロフィール
+        .formfield__input--normal
+          = f.text_field :profile
+      .formfield
+        .formfield__label--normal
+          = f.label :プロフィール画像
+        .formfield__input--normal
+          = f.file_field :image
+      .actions
+        = f.submit "更新", class: "Button UserButton"

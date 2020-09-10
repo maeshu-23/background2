@@ -1,0 +1,31 @@
+.ShowMain
+  .ShowMain__left
+    - if @user.image?
+      = image_tag @user.image.url, size: "120", class: "Userimage"
+    - else
+      = image_tag "no-image.png", alt: "Userlist_image", size: "120", class: "Userimage"
+    .ShowMain__left__content
+      .ShowMain__left__content__name
+        = @user.username
+        - if @user.id == current_user.id
+          .ShowMain__left__content__email
+            = @user.email
+      .ShowMain__left__content__profile
+        = @user.profile
+        - if @user.id == current_user.id
+          .ShowMain__left__content__edit
+            = link_to "プロフィールを編集", edit_user_path(@user), class: "ShowMain__left__content__editButton"
+  .ShowMain__right
+    .ShowMain__right__title
+      ■ 全ての投稿
+    - @user.tweets.each do |tweet|
+      .ShowMain__right__menu
+        .ShowMain__right__body
+          .ShowMain__right__body__title
+            = link_to tweet_path(tweet), class: "ShowMain__right__body__Title" do
+              = tweet.title
+          - if @user.id == current_user.id
+            .ShowMain__right__body__button
+              = link_to tweet_path(tweet), method: :delete, data: {confirm: "削除しますか？"}, class: 'UserBtn' do
+                = icon('fas','trash-alt')
+
