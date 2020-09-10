@@ -1,0 +1,18 @@
+.UserMain
+  .Userlists
+    - @users.each do |user|
+      .UserList
+        .Userlist
+          = link_to user_path(user) do
+            - if user.image?
+              = image_tag user.image.url, size: "120", class: "Userimage"
+            - else
+              = image_tag "no-image.png", alt: "Userlist_image", size: "120", class: "Userimage"
+          .Userlist__name
+            = link_to user.username, user_path(user)
+            %br
+            .Userlist__profile
+              = user.profile
+        .Usercount
+          投稿数: 
+          = user.tweets.count

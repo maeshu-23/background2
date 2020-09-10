@@ -1,0 +1,94 @@
+.ShowMain {
+  height: calc(100vh - 165px);
+  background-color: whitesmoke;
+  padding: 68px 130px 33px 130px;
+  display: flex;
+  &__left{
+    width: 500px;
+    height: 360px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    margin-right: 100px;
+    font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    box-shadow: 0 0 25px rgba(41,41,41,0.2);
+    &__image{
+      border-radius: 50%;
+      border: 1px solid #ddd;
+    }
+    &__content{
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      &__name{
+        padding-top: 40px;
+      }
+      &__email{
+        padding: 15px;
+        font-size: 18px;
+      }
+      &__profile{
+        font-size: 13px;
+        color: rgb(82, 78, 78);
+        height: 30px;
+        padding-top: 12px;
+      }
+      &__edit{
+        margin-top: 40px;
+      }
+      &__editButton{
+        font-size: 14px;
+        padding: 10px;
+        color: white;
+        border: 1px solid #ddd;
+        text-decoration: none;
+        background-color: gray;
+      }
+    }
+  }
+  &__right{
+    width: calc(100vw - 350px);
+    height: 600px;
+    background-color: white;
+    font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    box-shadow: 0 0 25px rgba(41,41,41,0.2);
+    overflow: hidden;
+    overflow: scroll;
+    &__title{
+      height: 40px;
+      padding: 18px;
+      font-weight: 600;
+      font-size: 23px;
+      background-color: burlywood;
+    }
+    &__menu{
+      overflow: scroll;
+      border-bottom: 1px solid #ddd;
+    }
+    &__body{
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      border-top: 1px solid lightgrey;
+      &__title{
+        font-size: 22px;
+        font-weight: 700;
+        padding: 4px 0 0 30px;
+      }
+      &__Title{
+        color: black;
+        text-decoration: none;
+      }
+      &__button{
+        padding: 3px;
+      }
+    }
+  }
+}
+.UserBtn {
+  text-decoration: none;
+  padding: 7px;
+  margin-right: 8px;
+  color: black;
+  font-size: 20px;
+}

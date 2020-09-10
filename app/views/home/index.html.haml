@@ -1,0 +1,21 @@
+.home
+  .home__title
+    Background
+  .home__body
+    人の歴史や発明にはそれぞれの"Background" つまり背景が存在します。その背景を知ることにより、より一層理解を深めることができます。
+    %br
+    当アプリはあなたの知っている"Background"やそのワードに纏わる裏話などを投稿し、共有し合うアプリです。
+    %br
+    なぜ○○はできたのか、なぜ○○は有名になったのかなど、あなたが知っている"Background"を投稿していきましょう！
+    %br
+    単語だけで理解していたことも"Background"に踏み込むと別世界が見えてくるかもしれません。
+
+  .homemain
+    - if user_signed_in?
+      .home__btn
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, data: {confirm: "ログアウトしますか？"}, class: 'home__btn__link'
+    - else
+      .home__btn
+        = link_to "ログイン", new_user_session_path, class: 'home__btn__link'
+      .home__btn
+        = link_to "新規登録", new_user_registration_path, class: 'home__btn__link'
