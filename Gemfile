@@ -7,6 +7,9 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'devise'
 gem 'font-awesome-sass'
+gem 'rails_12factor', group: :production
+gem 'fog-aws'
+gem 'dotenv-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
 # Use mysql as the database for Active Record
